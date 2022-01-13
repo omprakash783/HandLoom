@@ -2,21 +2,19 @@ import React from 'react'
 import {Routes,Route} from 'react-router-dom'
 import HomePage from './pages/HomePage/homepage.component'
 import ShopPage from './pages/Shop/shop.component'
+import Header from './components/header/header'
 
-function Hat(){
-  return(
-  <div>
-    <h1>Hats</h1>
-  </div>)
-}
+import './App.css'
 
 function App() {
   return (
+    <div>
+      <Header />
       <Routes>
           <Route exact path='/' element={<HomePage />} />
           <Route path='/shop' element={<ShopPage />} />
-          <Route path='/hats' element={<Hat />}  />
       </Routes>
+      </div>
     
   );
 }
